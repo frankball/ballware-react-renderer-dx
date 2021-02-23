@@ -1,4 +1,4 @@
-@ballware/ballware-react-renderer-dx / [Exports](modules.md)
+@ballware/react-renderer-dx / [Exports](modules.md)
 
 Provides an rendering implementation using wonderful DevExpress devextreme library.
 

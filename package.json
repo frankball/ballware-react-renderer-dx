@@ -45,7 +45,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@ballware/ballware-react-renderer-dx",
+  "name": "@ballware/react-renderer-dx",
   "description": "Ballware Application Builder - React renderer MUI with DevExtreme",
   "author": "frank@ballmeyer.com",
   "module": "dist/ballware-react-renderer-dx.esm.js",

@@ -1,3 +1,3 @@
-[@ballware/ballware-react-renderer-dx](README.md) / Exports
+[@ballware/react-renderer-dx](README.md) / Exports
 
-# @ballware/ballware-react-renderer-dx
+# @ballware/react-renderer-dx
