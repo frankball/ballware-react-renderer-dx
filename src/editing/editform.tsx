@@ -27,7 +27,7 @@ export interface EditFormRef {
 }
 
 export interface EditFormProps {
-  functionIdentifier: string;
+  functionIdentifier?: string;
   editLayout: EditLayout;
 }
 

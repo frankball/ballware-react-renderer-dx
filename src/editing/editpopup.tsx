@@ -48,7 +48,7 @@ export const EditPopup = (props: EditPopupProps) => {
 
   return (
     <React.Fragment>
-      {functionIdentifier && editLayout && (
+      {editLayout && (
         <Dialog
           open
           onClose={cancelClicked}
