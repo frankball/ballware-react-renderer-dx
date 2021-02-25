@@ -13,7 +13,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  CircularProgress,
 } from '@material-ui/core';
 import ErrorIcon from '@material-ui/icons/Error';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
@@ -146,5 +145,5 @@ export const SummaryList = ({ layoutItem }: SummaryListProps) => {
     );
   }
 
-  return <CircularProgress />;
+  return <React.Fragment></React.Fragment>;
 };

@@ -13,15 +13,10 @@ import {
 import Iframe from 'react-iframe';
 import { CrudContext } from '@ballware/react-contexts';
 import { useTranslation } from 'react-i18next';
+import { IframePopupProps } from '@ballware/react-renderer';
 
-export interface ExternalLinkEditPopupProps {
-  title: string;
-  externalUrl: string;
-  functionIdentifier?: string;
-}
-
-export const ExternalLinkEditPopup = (props: ExternalLinkEditPopupProps) => {
-  const { title, externalUrl } = props;
+export const ExternalLinkEditPopup = (props: IframePopupProps) => {
+  const { title, url } = props;
 
   const { t } = useTranslation();
   const { close } = useContext(CrudContext);
@@ -55,7 +50,7 @@ export const ExternalLinkEditPopup = (props: ExternalLinkEditPopupProps) => {
           styles={{ border: 0 }}
           width={'100%'}
           height={'100%'}
-          url={externalUrl}
+          url={url}
         />
       </DialogContent>
       <DialogActions>

@@ -62,6 +62,7 @@ import { DatetimeToolbarItem } from './layout/toolbaritems/datetime';
 import { MultiLookupToolbarItem } from './layout/toolbaritems/multilookup';
 import { LookupToolbarItem } from './layout/toolbaritems/lookup';
 import { FilterBar } from './layout/filterbar';
+import { ExternalLinkEditPopup } from './editing/externallinkeditpopup';
 
 export interface DevExtremeRenderFactoryProps {}
 
@@ -326,6 +327,7 @@ export const DxRenderFactoryProvider = ({
         DeletePopup: (props) => <DeletePopup {...props} />,
         ForeignEditPopup: (props) => <ForeignEditPopup {...props} />,
         DetailEditPopup: (props) => <DetailEditPopup {...props} />,
+        IframePopup: (props) => <ExternalLinkEditPopup {...props} />,
       };
     });
   }, []);
