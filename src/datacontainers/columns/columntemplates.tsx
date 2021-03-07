@@ -8,6 +8,7 @@ import {
   LookupStoreDescriptor,
   LookupContext,
 } from '@ballware/react-contexts';
+import { EditItemsProvider } from '@ballware/react-renderer';
 import { createLookupDataSource } from '../../util/datasource';
 import { dxTreeListColumn } from 'devextreme/ui/tree_list';
 import { dxDataGridColumn } from 'devextreme/ui/data_grid';
@@ -396,11 +397,13 @@ const TemplateColumn = ({
             item={getByPath(item, dataMember) as string}
             editLayout={undefined}
           >
-            <DetailEditPopup
-              readonly={!editing}
-              column={columnOptions}
-              applyChanges={onValueChanged}
-            />
+            <EditItemsProvider>
+              <DetailEditPopup
+                readonly={!editing}
+                column={columnOptions}
+                applyChanges={onValueChanged}
+              />
+            </EditItemsProvider>
           </EditProvider>
         );
       }
