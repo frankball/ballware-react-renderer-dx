@@ -393,10 +393,7 @@ const TemplateColumn = ({
       }
       case 'popup': {
         return (
-          <EditProvider
-            item={getByPath(item, dataMember) as string}
-            editLayout={undefined}
-          >
+          <EditProvider item={item} editLayout={undefined}>
             <EditItemsProvider>
               <DetailEditPopup
                 readonly={!editing}

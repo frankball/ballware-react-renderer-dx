@@ -26,4 +26,4 @@ Name | Type |
 
 **Returns:** *Element*
 
-Defined in: [dxrenderfactoryprovider.tsx:304](https://github.com/frankball/ballware-react-renderer-dx/blob/5a8c37c/src/dxrenderfactoryprovider.tsx#L304)
+Defined in: [dxrenderfactoryprovider.tsx:304](https://github.com/frankball/ballware-react-renderer-dx/blob/24b92c6/src/dxrenderfactoryprovider.tsx#L304)
