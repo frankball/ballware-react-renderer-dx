@@ -3,7 +3,7 @@ import { Switch, Redirect } from 'react-router-dom';
 
 import {
   ProviderFactoryContext,
-  ResourceOwnerRightsContext,
+  RightsContext,
   TenantContext,
 } from '@ballware/react-contexts';
 
@@ -14,7 +14,7 @@ import { RenderFactoryContext } from '@ballware/react-renderer';
 export interface RoutesProps {}
 
 export const Routes = ({ children }: PropsWithChildren<RoutesProps>) => {
-  const { rights } = useContext(ResourceOwnerRightsContext);
+  const { rights } = useContext(RightsContext);
   const { navigation, pages, pageAllowed } = useContext(TenantContext);
   const { Page } = useContext(RenderFactoryContext);
   const { LookupProvider, PageProvider } = useContext(ProviderFactoryContext);

@@ -1,5 +1,5 @@
 {
-  "version": "6.0.0-beta5",
+  "version": "6.0.0-beta6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -111,6 +111,6 @@
   },
   "dependencies": {
     "@ballware/meta-interface": "^6.0.2",
-    "@ballware/react-renderer": "^6.0.1"
+    "@ballware/react-renderer": "^6.0.2"
   }
 }

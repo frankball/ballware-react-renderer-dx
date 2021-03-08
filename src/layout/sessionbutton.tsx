@@ -12,15 +12,20 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Badge from '@material-ui/core/Badge';
-import { ResourceOwnerRightsContext } from '@ballware/react-contexts';
+import { RightsContext } from '@ballware/react-contexts';
 
 export const SessionButton = () => {
   const history = useHistory();
   const { t } = useTranslation();
 
-  const { timeout_in, rights, logout, refresh } = useContext(
-    ResourceOwnerRightsContext
-  );
+  const {
+    timeout_in,
+    rights,
+    logout,
+    refresh,
+    changePassword,
+    manageAccount,
+  } = useContext(RightsContext);
   const [timeoutIn, setTimeoutIn] = React.useState(
     timeout_in ? moment(timeout_in).diff(moment(), 'seconds') : 0
   );
@@ -68,6 +73,12 @@ export const SessionButton = () => {
     }
   }, [history]);
 
+  const onManageAccount = useCallback(() => {
+    if (manageAccount) {
+      manageAccount();
+    }
+  }, [manageAccount]);
+
   const badgeContent = useMemo(
     () => `${moment.duration(timeoutIn, 'seconds').format('m:ss')}`,
     [timeoutIn]
@@ -98,9 +109,14 @@ export const SessionButton = () => {
           {timeoutIn > 0 && (
             <MenuItem onClick={onRefresh}>{t('session.refresh')}</MenuItem>
           )}
-          {rights && (
+          {rights && changePassword && (
             <MenuItem onClick={onChangePassword}>
               {t('session.changepassword')}
+            </MenuItem>
+          )}
+          {rights && manageAccount && (
+            <MenuItem onClick={onManageAccount}>
+              {t('session.manageaccount')}
             </MenuItem>
           )}
           {rights && (
